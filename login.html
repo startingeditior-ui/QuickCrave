@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+    <script>
+        function log(){
+            alert('Login Successfull');
+        }
+    </script>
+</head>
+<body>
+    <div class="login-page">
+        <div class="form">
+            <h3 class="heading">Login Form</h3>
+            <form action="login.php" method="post">
+                <label>Username</label> 
+                <input type="text" placeholder="Username" class="padding" name="username">
+                <br>
+                <label>Password</label>
+                <input type="password" placeholder="Vis******" id="" class="padding" name="password">
+                <br>
+                <input type="submit" value="Login">
+                <button onclick="log()" class="btn"> <a href="food-signup.html">Login</a></button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

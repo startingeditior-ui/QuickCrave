@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Food Delivery Checkout</title>
+    <link rel="icon" href="images/quickcrave-modified.png">
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+
+<div class="checkout">
+    <h2>Checkout</h2>
+
+    <section>
+        <h3>Customer Details</h3>
+        <input id="name" type="text" placeholder="Full Name">
+        <input id="phone" type="text" placeholder="Mobile Number">
+        <input id="email" type="email" placeholder="Email (optional)">
+    </section>
+
+    <section>
+        <h3>Delivery Address</h3>
+        <input id="address" type="text" placeholder="House / Street">
+        <input id="city" type="text" placeholder="City">
+        <input id="pincode" type="text" placeholder="Pincode">
+        <textarea id="instructions" placeholder="Delivery instructions (optional)"></textarea>
+    </section>
+
+    <section class="summary">
+    <h3>Order Summary</h3>
+    <p>Item: <span id="foodName">-</span></p>
+    <p>Food Items Total: ₹<span id="itemTotal">0</span></p>
+    <p>Delivery Fee: ₹<span id="deliveryFee">40</span></p>
+    <p><strong>Total Payable: ₹<span id="totalPayable">0</span></strong></p>
+</section>
+
+
+    <section>
+        <h3>Payment Method</h3>
+        <select id="paymentMethod">
+            <option value="">Select Payment Method</option>
+            <option value="card">Card</option>
+            <option value="upi">UPI</option>
+            <option value="cod">Cash on Delivery</option>
+        </select>
+    </section>
+    
+    <section id="cardSection" class="hidden">
+        <input id="cardName" type="text" placeholder="Cardholder Name">
+        <input id="cardNumber" type="text" placeholder="Card Number (16 digits)">
+        <div class="row">
+            <input id="expiry" type="month">
+            <input id="cvv" type="password" placeholder="CVV">
+        </div>
+    </section>
+
+    <section id="upiSection" class="hidden">
+        <input id="upiId" type="text" placeholder="UPI ID (example@upi)">
+    </section>
+
+    <section>
+        <label class="terms">
+            <input id="terms" type="checkbox">
+            I agree to Terms & Conditions
+        </label>
+    </section>
+
+    <p id="status" class="status"></p>
+
+    <button id="payBtn" disabled>Place Order</button>
+</div>
+
+<script src="payment.js"></script>
+</body>
+</html>
